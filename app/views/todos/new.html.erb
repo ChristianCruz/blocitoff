@@ -1,4 +1,5 @@
-<%= form_for Todo.new do |form| %>
+<p>Add new item to your todo list</p>
+<%= form_for Todos.new do |form| %>
   <%= form.text_field :description, placeholder: 'Description' %>
     <%= form.submit 'Save' %>
 <% end %>
