@@ -1,5 +1,6 @@
 <p>Add new item to your todo list</p>
-<%= form_for Todos.new do |form| %>
-  <%= form.text_field :description, placeholder: 'Description' %>
-    <%= form.submit 'Save' %>
+<%= form_for @todo, :url => todos_path(@todo) do |f| %>
+  <%= f.label :name %>: <% f.text_field :name %>
+  <%= f.hidden_field :done, :value => false %>
+  <%= f.submit "Add to todo list" %>
 <% end %>
