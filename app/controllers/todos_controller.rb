@@ -10,8 +10,12 @@ class TodosController < ApplicationController
 
   def create
     @todo = Todos.new(todo_params)
-    @todo.save
-    redirect_to @todo, notice: 'Your new TODO was saved'
+    
+    if @todo.save
+      redirect_to todos_path, notice: 'Your new TODO item was saved'
+    else
+      render "new"
+    end
   end
 
   def show
@@ -21,6 +25,6 @@ class TodosController < ApplicationController
   private
 
   def todo_params
-    params.require(:todo).permit(:description)
+    params.require(:todos).permit(:name, :done)
   end
 end
