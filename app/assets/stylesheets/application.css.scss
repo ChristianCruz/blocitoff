@@ -13,3 +13,47 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:200,300,400,500,600,700,900);
+
+body {
+  background: #e3e3e3;
+  font-family: 'Source Code Pro' ;
+}
+
+.navbar {
+  background-color: #fff;
+  height: 80px;
+}
+
+body > div.navbar.navbar-default > div {
+  margin-top: 13px;
+}
+
+.logillo {
+  margin-top: 3px;
+}
+
+.nav-pills {
+  margin-top: 6px;
+}
+
+.nav-pills a {
+  background-color: #fff;
+  color: #000;
+  border: none;
+}
+
+.navbar ul a:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+h1 {
+  font-family: 'Source Code Pro';
+  font-weight: 900;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

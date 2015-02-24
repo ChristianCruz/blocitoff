@@ -2,9 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   #Root of the site
-  root :to => 'welcome#index'
-
-  resources :todos
+  root to: 'welcome#index'
 
   get 'welcome/about'
 
