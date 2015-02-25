@@ -22,16 +22,24 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav nav-pills pull-right">
-            <li>
-              <%= link_to new_user_session_path, class: 'btn btn-primary btn-sm' do %>
+           
+              <% if current_user %>
+             <p class="welcome_user">Hello <%= current_user.email %>! <%= link_to destroy_user_session_path, method: :delete, class: 'btn btn-primary btn-sm' do %>
+                <span class="glyphicon glyphicon-log-out"></span>
+              <% end %></p>
+           <% else %>
+             <li>
+              <%= link_to new_user_session_path, class: 'logau btn btn-primary btn-sm' do %>
                 <span class="glyphicon glyphicon-log-in"></span> LOG IN
               <% end %>
             </li>
             <li>
-              <%= link_to edit_user_registration_path, class: 'btn btn-primary btn-sm' do %>
+              <%= link_to new_user_registration_path, class: 'btn btn-primary btn-sm' do %>
                 <span class="glyphicon glyphicon-pencil"></span> SIGN UP
               <% end %>
             </li>
+           <% end %>
+           
           </ul>
         </div><!--/.nav-collapse -->
       </div>
