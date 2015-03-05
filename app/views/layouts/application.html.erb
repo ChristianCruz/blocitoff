@@ -4,7 +4,6 @@
   <title>Blocitoff</title>
   <meta name="viewport" content="width=device-with, initial-scale-1">
   <%= stylesheet_link_tag    'application', media: 'all' %>
-  <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:200,300,400,500,600,700,900' rel='stylesheet' type='text/css'>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
@@ -25,8 +24,8 @@
           <ul class="nav nav-pills pull-right">
            
               <% if current_user %>
-             <p class="welcome_user">Hello <%= current_user.email %>! <%= link_to destroy_user_session_path, method: :delete, class: 'btn btn-primary btn-sm' do %>
-                <span class="glyphicon glyphicon-log-out"></span>
+             <p class="welcome_user">Hello <%= link_to (current_user.name || current_user.email), edit_user_registration_path %>! <%= link_to destroy_user_session_path, method: :delete, class: 'btn btn-primary btn-sm' do %>
+                <span class="glyphicon glyphicon-log-out"></span> LOG OUT
               <% end %></p>
            <% else %>
              <li>
