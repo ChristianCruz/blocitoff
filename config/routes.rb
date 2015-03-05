@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
+  get 'items/create'
+
   devise_for :users
+  resources :lists do
+    resources :items, only: [:create]
+  end
 
   #Root of the site
   root to: 'welcome#index'
-
-  get 'welcome/about'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

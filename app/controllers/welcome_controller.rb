@@ -1,7 +1,7 @@
 class WelcomeController < ApplicationController
   def index
     # if user_signed_in?
-    #   redirect_to :controller => 'todos', :action => 'index'
+    #   redirect_to :controller => 'lists', :action => 'show'
     # end
   end
 

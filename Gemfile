@@ -21,6 +21,8 @@ gem 'bootstrap-sass'
 
 gem 'figaro', '1.0'
 
+gem "letter_opener", :group => :development
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
@@ -37,6 +39,11 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'  
 end
+
+# group :production, :staging do
+#   gem 'pg'
+#   gem 'rails_12factor'
+# end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
