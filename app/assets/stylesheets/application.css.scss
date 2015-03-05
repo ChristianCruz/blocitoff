@@ -49,6 +49,17 @@ body > div.navbar.navbar-default > div {
   margin-top: 7px;
 }
 
+body > div.navbar.navbar-default > div > div.navbar-collapse.collapse > ul > p > a:nth-child(1) {
+  color: #000;
+  background: none;
+}
+
+body > div.navbar.navbar-default > div > div.navbar-collapse.collapse > ul > p > a:nth-child(1):hover {
+  color: #ff0025;
+  background: none;
+  text-decoration: none;
+}
+
 body > div.navbar.navbar-default > div > div.navbar-collapse.collapse > ul > p > a {
   background-color: #ff0025;
   color: #fff;
