@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
   get 'users/update'
 
+  get 'users/show'
+
   get 'items/create'
 
   devise_for :users
-  resources :users, only: [:update]
-  resources :lists do
-    resources :items, only: [:create]
-  end
+  resources :users, only: [:update, :show]
+  resources :items, only: [:create]
 
   #Root of the site
   root to: 'welcome#index'
