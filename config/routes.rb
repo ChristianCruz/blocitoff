@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
+  get 'users/update'
+
   get 'items/create'
 
   devise_for :users
+  resources :users, only: [:update]
   resources :lists do
     resources :items, only: [:create]
   end
