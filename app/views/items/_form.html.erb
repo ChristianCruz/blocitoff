@@ -1,5 +1,5 @@
 <h4>Add a new item to your list:</h4>
-  <%= form_for Item.new do |f| %>
+  <%= form_for [@user, Item.new] do |f| %>
     <%= f.label :name %>
     <%= f.text_field :name %>
     <%= f.submit %>
