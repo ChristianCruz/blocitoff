@@ -46,9 +46,9 @@
     </div>
 
   <div class="container">
-    
-    <p><%= flash[:notice] if flash[:notice] %></p>
-
+    <div class="alerta">
+      <p><%= flash[:notice] if flash[:notice] %></p>
+    </div>
     <%= yield %>
   </div>
 
