@@ -17,14 +17,26 @@
 @import "bootstrap";
 @import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:200,300,400,500,600,700,900);
 
+
+
+
+/*|----------------------- */
+/*|= = = TYPOGRAPHY = = = */
+/*|--------------------- */
+
 body {
-  background: #e3e3e3;
+  background: #DEE6FE;
   font-family: 'Source Code Pro' ;
 }
 
 .navbar {
   background-color: #fff;
   height: 80px;
+}
+
+.todo_items {
+  background: #fff;
+  padding: 15px 15px 0px 15px;
 }
 
 body > div.navbar.navbar-default > div {

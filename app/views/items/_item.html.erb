@@ -1,3 +1,7 @@
-<%= content_tag :div, class: 'media', id: "item-#{item.id}" do %>
-  <%= item.name %> <%= link_to "", user_item_path(@user, item), method: :delete, class: 'glyphicon glyphicon-ok', remote: true %><br/><br/>
-<% end %>
+<div class="todo_items">
+  <%= content_tag :div, class: 'media', id: "item-#{item.id}" do %>
+    <%= item.name %> <%= link_to "", user_item_path(@user, item), method: :delete, class: 'glyphicon glyphicon-trash pull-right', remote: true %><br/>
+    <small>This item will self-destruct in</small> <%= item.days_left %> <small>days.</small></%><br/><br/>
+    <hr/>
+  <% end %>
+</div>

@@ -1,6 +1,9 @@
-<h4>Add a new item to your list:</h4>
-  <%= form_for [@user, Item.new] do |f| %>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-    <%= f.submit %>
-  <% end %>
+
+    <h4>Add a new item to your list:</h4>
+      <%= form_for [@user, Item.new] do |f| %>
+      <div class="form-group">
+        
+        <%= f.text_field :name, class: 'form-control', placeholder: "Type in your task..."  %>
+      </div>
+        <%= f.submit "Submit entry", class: 'btn-lg btn-success' %>
+      <% end %>
