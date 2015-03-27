@@ -1,5 +1,11 @@
-require 'rails_helper'
+# require 'rails_helper'
 
-RSpec.describe User, :type => :model do
-  pending "add some examples to (or delete) #{__FILE__}"
-end
+# describe User do
+  
+#   context 'validate User model' do
+#     it 'should validate user creation' do
+#       user = User.create(name: 'Charlie', email: 'charlie@example.com', encrypted_password: 'password123')
+#       expect(user).to be_valid
+#     end
+#   end
+# end
